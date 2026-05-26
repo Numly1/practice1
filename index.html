@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoParts — автозапчасти</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html"><span class="logo-mark">A</span> AutoParts</a>
+      <nav class="nav">
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="contacts.html">Контакты</a>
+        <a class="cart-link" href="cart.html">Корзина: <span data-cart-count>0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <h1>Автозапчасти без лишней суеты</h1>
+        <p>Простой интернет-магазин с подбором запчастей по марке автомобиля, модели и VIN-коду.</p>
+        <div class="actions">
+          <a class="btn" href="catalog.html">Смотреть каталог</a>
+          <a class="btn secondary" href="contacts.html">Оставить заявку</a>
+        </div>
+      </div>
+      <div class="hero-box">
+        <strong>24/7</strong>
+        <span>заявки с сайта принимаются круглосуточно</span>
+        <hr style="border: 0; border-top: 1px solid rgba(255,255,255,.18); margin: 20px 0;">
+        <strong>8+</strong>
+        <span>популярных позиций в демо-каталоге</span>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">
+        <div>
+          <h2>Категории</h2>
+          <p>Самые востребованные разделы магазина</p>
+        </div>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="category-icon">🛞</div>
+          <h3>Тормозная система</h3>
+          <p>Колодки, диски, суппорты и тормозные жидкости.</p>
+        </article>
+        <article class="card">
+          <div class="category-icon">🔧</div>
+          <h3>Фильтры</h3>
+          <p>Масляные, воздушные, топливные и салонные фильтры.</p>
+        </article>
+        <article class="card">
+          <div class="category-icon">⚙️</div>
+          <h3>Подвеска</h3>
+          <p>Амортизаторы, рычаги, стойки, втулки и опоры.</p>
+        </article>
+        <article class="card">
+          <div class="category-icon">🔋</div>
+          <h3>Электрика</h3>
+          <p>Аккумуляторы, лампы, датчики и провода.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">
+        <div>
+          <h2>Популярные товары</h2>
+          <p>Примеры карточек товара на главной странице</p>
+        </div>
+        <a href="catalog.html">Все товары →</a>
+      </div>
+      <div class="grid three" data-catalog></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© 2026 AutoParts</span>
+      <span>Телефон: +7 900 000-00-00</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

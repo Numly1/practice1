@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакты — AutoParts</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html"><span class="logo-mark">A</span> AutoParts</a>
+      <nav class="nav">
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="contacts.html">Контакты</a>
+        <a class="cart-link" href="cart.html">Корзина: <span data-cart-count>0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-head">
+      <h1>Контакты и заявка</h1>
+    </section>
+
+    <section class="grid three">
+      <article class="info-card">
+        <h3>Телефон</h3>
+        <p>+7 900 000-00-00</p>
+      </article>
+      <article class="info-card">
+        <h3>Email</h3>
+        <p>info@autoparts.ru</p>
+      </article>
+      <article class="info-card">
+        <h3>Адрес</h3>
+        <p>г. Москва, ул. Автомобильная, 10</p>
+      </article>
+    </section>
+
+    <section class="section-title">
+      <div>
+        <h2>Оставить заявку</h2>
+      </div>
+    </section>
+
+    <form class="form-box" data-demo-form>
+      <div class="form-grid">
+        <div>
+          <label for="name">Ваше имя</label>
+          <input class="input" id="name" type="text" placeholder="Иван" required>
+        </div>
+        <div>
+          <label for="phone">Телефон</label>
+          <input class="input" id="phone" type="tel" placeholder="+7 900 000-00-00" required>
+        </div>
+        <div>
+          <label for="car">Автомобиль</label>
+          <input class="input" id="car" type="text" placeholder="Toyota Camry 2015">
+        </div>
+        <div>
+          <label for="vin">VIN-код</label>
+          <input class="input" id="vin" type="text" placeholder="Необязательно">
+        </div>
+        <div class="full">
+          <label for="message">Что нужно подобрать?</label>
+          <textarea class="textarea" id="message" placeholder="Например: нужны тормозные колодки и масляный фильтр"></textarea>
+        </div>
+      </div>
+      <button class="btn" type="submit" style="margin-top: 16px;">Отправить заявку</button>
+    </form>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© 2026 AutoParts</span>
+      <span>Подбор запчастей по VIN</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог — AutoParts</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html"><span class="logo-mark">A</span> AutoParts</a>
+      <nav class="nav">
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="contacts.html">Контакты</a>
+        <a class="cart-link" href="cart.html">Корзина: <span data-cart-count>0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-head">
+      <h1>Каталог автозапчастей</h1>
+      <p>Найдите нужную деталь через поиск или фильтр по категории.</p>
+    </section>
+
+    <section class="filters">
+      <input class="search-input" type="search" placeholder="Поиск по названию или описанию" data-search>
+      <select class="select" data-category>
+        <option value="all">Все категории</option>
+        <option value="Тормозная система">Тормозная система</option>
+        <option value="Фильтры">Фильтры</option>
+        <option value="Подвеска">Подвеска</option>
+        <option value="Двигатель">Двигатель</option>
+        <option value="Электрика">Электрика</option>
+        <option value="Кузов и стекло">Кузов и стекло</option>
+        <option value="Масла и жидкости">Масла и жидкости</option>
+      </select>
+    </section>
+
+    <section class="grid three" data-catalog></section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© 2026 AutoParts</span>
+      <span>Каталог демо-товаров</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
