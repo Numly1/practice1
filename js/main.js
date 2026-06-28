@@ -4,7 +4,7 @@ const products = [
     name: 'Тормозные колодки',
     category: 'Тормозная система',
     price: 2500,
-    icon: '🛞',
+    image: 'images/kolodki.webp',
     description: 'Комплект передних тормозных колодок для популярных легковых автомобилей.'
   },
   {
@@ -12,7 +12,7 @@ const products = [
     name: 'Масляный фильтр',
     category: 'Фильтры',
     price: 700,
-    icon: '🔧',
+    image: 'images/masl_filtr.webp',
     description: 'Фильтр для защиты двигателя от загрязнений и продления срока службы масла.'
   },
   {
@@ -20,7 +20,7 @@ const products = [
     name: 'Воздушный фильтр',
     category: 'Фильтры',
     price: 950,
-    icon: '🌬️',
+    image: 'images/air-filtr.webp',
     description: 'Воздушный фильтр для стабильной работы двигателя и снижения расхода топлива.'
   },
   {
@@ -28,7 +28,7 @@ const products = [
     name: 'Амортизатор',
     category: 'Подвеска',
     price: 4900,
-    icon: '⚙️',
+    image: 'images/amoriki.webp',
     description: 'Передний или задний амортизатор для комфортной и безопасной езды.'
   },
   {
@@ -36,7 +36,7 @@ const products = [
     name: 'Свечи зажигания',
     category: 'Двигатель',
     price: 1200,
-    icon: '🔥',
+    image: 'images/svechi.webp',
     description: 'Комплект свечей зажигания для стабильного запуска двигателя.'
   },
   {
@@ -44,7 +44,7 @@ const products = [
     name: 'Аккумулятор 60 А·ч',
     category: 'Электрика',
     price: 7200,
-    icon: '🔋',
+    image: 'images/carbattery.webp',
     description: 'Надёжный аккумулятор для городского режима и поездок на дальние расстояния.'
   },
   {
@@ -52,7 +52,7 @@ const products = [
     name: 'Щётки стеклоочистителя',
     category: 'Кузов и стекло',
     price: 1100,
-    icon: '💦',
+    image: 'images/schetki.webp',
     description: 'Комплект щёток для чистого обзора в дождь и снег.'
   },
   {
@@ -60,7 +60,7 @@ const products = [
     name: 'Моторное масло 5W-30',
     category: 'Масла и жидкости',
     price: 3200,
-    icon: '🛢️',
+    image: 'images/motor-maslo.webp',
     description: 'Синтетическое моторное масло для бензиновых и дизельных двигателей.'
   }
 ];
@@ -101,7 +101,7 @@ function renderProducts(list = products) {
 
   catalog.innerHTML = list.map((product) => `
     <article class="product-card">
-      <div class="product-image">${product.icon}</div>
+      <div class="product-image"><img src="${product.image}" alt="${product.name}"></div>
       <h3>${product.name}</h3>
       <p>${product.description}</p>
       <div class="price">${formatPrice(product.price)}</div>
@@ -145,7 +145,7 @@ function renderProductDetail() {
 
   document.title = `${product.name} — AutoParts`;
   productBox.innerHTML = `
-    <div class="big-product-image">${product.icon}</div>
+    <div class="big-product-image"><img src="${product.image}" alt="${product.name}"></div>
     <div class="product-info">
       <div class="breadcrumbs"><a href="catalog.html">Каталог</a> / ${product.category}</div>
       <h1>${product.name}</h1>
@@ -217,8 +217,11 @@ function renderCart() {
 
     return `
       <div class="cart-row">
-        <div>
-          <strong>${product.icon} ${product.name}</strong><br>
+      <div class="cart-item-left">
+      <div class="cart-item-image">
+      <img src="${product.image}" alt="${product.name}">
+      </div>
+          <strong>${product.name}</strong><br>
           <small>${product.category} · ${formatPrice(product.price)} за шт.</small>
         </div>
         <div class="qty">
